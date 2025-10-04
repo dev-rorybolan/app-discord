@@ -1,6 +1,6 @@
 @echo off
 set REPO_NAME=app-discord
-
+cd $HOME/Downloads
 if exist "%REPO_NAME%" (
     echo Repository already exists. Updating...
     cd %REPO_NAME%
@@ -32,6 +32,7 @@ if errorlevel 1 (
 )
 
 echo Running application...
-python src/main.py
+cd src
+python main.py
 
 pause
