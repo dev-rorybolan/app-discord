@@ -1,0 +1,22 @@
+QPushButton {
+    background-color: #5865F2;      /* Discord blurple */
+    color: white;                   /* White text */
+    border: none;                   /* No border */
+    border-radius: 5px;             /* Slightly rounded corners */
+    padding: 8px 16px;              /* Comfortable padding */
+    font-weight: bold;              /* Bold text */
+    font-size: 14px;                /* Readable size */
+}
+
+QPushButton:hover {
+    background-color: #4752C4;      /* Darker blurple on hover */
+}
+
+QPushButton:pressed {
+    background-color: #3C45A5;      /* Even darker on press */
+}
+
+QPushButton:disabled {
+    background-color: #99AAB5;      /* Muted grey when disabled */
+    color: #DCDDDE;                 /* Lighter text */
+}
