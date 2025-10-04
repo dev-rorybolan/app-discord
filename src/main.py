@@ -6,7 +6,7 @@ from PySide6.QtCore import QSize, QUrl
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import QApplication, QMainWindow, QLabel, QTextEdit, QWidget, QPushButton, QStackedWidget
 from PySide6.QtGui import QPixmap, Qt, QTransform
-import psycopg2
+from psycopg2 import connect
 
 
 class MainWindow(QMainWindow):
@@ -16,7 +16,7 @@ class MainWindow(QMainWindow):
         self.setFixedSize(1600, 890)
 
 
-        self.__connection = psycopg2.connect("postgresql://postgres:boykisser_owo@db.xogfzilynvmgmaayasou.supabase.co:5432/postgres")
+        self.__connection = connect("postgresql://postgres:boykisser_owo@db.xogfzilynvmgmaayasou.supabase.co:5432/postgres")
         self.__cursor = self.__connection.cursor()
         self.__cursor.execute(
             """
