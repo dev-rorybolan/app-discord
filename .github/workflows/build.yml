@@ -25,7 +25,15 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build EXE with PyInstaller
-        run: pyinstaller --onefile --name "final" --add-data "resources;resources" --add-data "../assets;assets" src/main.py
+        shell: bash
+        run: |
+          python -m pyinstaller \
+            --onefile \
+            --name "final" \
+            --add-data "resources;resources" \
+            --add-data "../assets;assets" \
+            src/main.py
+
 
 
 
