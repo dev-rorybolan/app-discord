@@ -14,7 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Set up Python
+      - name: Set up Python  
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'  # or your version
@@ -25,14 +25,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Build EXE with PyInstaller
-        shell: bash
-        run: |
-          python -m pyinstaller \
-            --onefile \
-            --name "final" \
-            --add-data "resources;resources" \
-            --add-data "../assets;assets" \
-            src/main.py
+        run: pyinstaller --onefile --name "final" --add-data "resources;resources" --add-data "../assets;assets" src/main.py
 
 
 
